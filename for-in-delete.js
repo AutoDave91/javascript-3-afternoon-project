@@ -5,7 +5,7 @@
 
   You can refresh the page at any time to re-run all the tests.
 */
-
+ 
 /*
   First we'll look at the difference between accessing property values in a for in loop and accessing the property name in a for in loop.
   In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
@@ -40,7 +40,11 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  let propVal = '';
+  for(let key in obj){
+    propVal += obj[key]
+  }
+  return propVal;
 }
 
 
@@ -55,7 +59,15 @@ function showValues( obj ) {
 
 //Code Here
 
-
+function greaterThan10(obj){
+  let over10 = {}
+  for(let key in obj){
+    if(key >10){
+      return key = 0;
+    }
+  }    
+  return over10; 
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -67,7 +79,12 @@ function showValues( obj ) {
 
 //Code Here
 
-
+function double(obj){
+  for(let key in obj){
+    return key * 2;
+  }
+  return obj;
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -81,7 +98,15 @@ function showValues( obj ) {
 
 //Code Here
 
-
+function secrets( obj ) {
+  let shhh = '';
+  for(let key in obj){
+    if(key === 'sh'){
+      shhh +=obj[key];
+    }
+  }
+  return shhh;
+}
 
 /* 
   Sometimes it's needed to delete object properties. 
@@ -112,7 +137,10 @@ function showValues( obj ) {
 
 //Code Here
 
-
+function removePassword(obj){
+  delete obj.password;
+  return obj;
+}
 
 ////////// PROBLEM 6 //////////
 
@@ -131,7 +159,12 @@ var deleteTheBigNumbers = {
 
 //Code Here
 
-
+// for(let key in obj){
+//   if([key] >100){
+//     delete [key];
+//   }
+//   return deleteTheBigNumbers;
+// }
 
 ////////// PROBLEM 7 //////////
 

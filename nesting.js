@@ -44,7 +44,8 @@ var employees = [
 // Do not edit the code above.
 
 /*
-  Create a function called 'employeeUpdater' that takes no parameters. employeeUpdater will loop over the array above and perform the following:
+  Create a function called 'employeeUpdater' that takes no parameters.
+  employeeUpdater will loop over the array above and perform the following:
     1. If employee's first name is Theo, remove that employee because he just got fired.
     2. If the employee's first name is Lorie, change her department to 'HR'.
     3. Return the updated employee array.
@@ -52,7 +53,17 @@ var employees = [
 
 //Code Here
 
-
+function employeeUpdater(){
+  for (let i=0; i<employees.length; i++) {
+    if (employees[i].firstName === "Theo") {
+    employees.splice(i,1);
+  }
+    if (employees[i].firstName === "Lorie") {
+    employees[i].department = "HR";
+  }
+}
+return employees;
+}
 
 ////////// PROBLEM 2 //////////
 
@@ -70,7 +81,21 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 //Code Here
 
+// function removeDuplicates(arr){
+//   return arr.filter(function(item, index){
+//     return Array.indexOf(item) >= index;
+//   }
+// }
 
+function removeDuplicates(arr){
+  let accidents = []
+  for(let i = 0;i < arr.length; i++){
+      if(accidents.indexOf(arr[i]) == -1){
+          accidents.push(arr[i])
+      }
+  }
+  return accidents;
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -97,8 +122,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+// var grumpyActivity;
+// var fluffy2ndFriend;
 
 
 
@@ -158,5 +183,3 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
-
-
